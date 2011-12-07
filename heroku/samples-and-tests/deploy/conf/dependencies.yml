@@ -1,0 +1,12 @@
+# Application dependencies
+
+require:
+    - play
+    - localModule -> heroku 0.1
+
+repositories:
+    - localModule:
+        type: local
+        artifact: "${application.path}/../../dist/[module]-[revision].zip"
+        contains:
+            - localModule -> *
