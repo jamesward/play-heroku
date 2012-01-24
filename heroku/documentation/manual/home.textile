@@ -1,0 +1,31 @@
+h1. Heroku Play Framework Module
+
+The Heroku Play Framework Module provides an easy way deploy your Play! app to "Heroku - a Cloud Application Platform":http://heroku.com.
+
+The source code and issue tracker is on github:
+"https://github.com/jamesward/play-heroku":https://github.com/jamesward/play-heroku
+
+h2. <a name="install">Installation</a>
+
+Install the module:
+
+bc. play install heroku
+
+h2. <a name="using">Using The Heroku Module</a>
+
+p. Create a Heroku account (if you don't already have one):
+"https://heroku.com/signup":https://heroku.com/signup
+
+p. Update your @conf/application.conf@ file to connect to a database on Heroku (if you are using a database):
+
+bc. %prod.db=${DATABASE_URL}
+%prod.jpa.dialect=org.hibernate.dialect.PostgreSQLDialect
+%prod.jpa.ddl=update
+
+p. Deploy the application on Heroku:
+
+bc. play heroku:deploy
+
+h2. <a name="learnmore">Learn More About Heroku</a>
+
+p. To learn more about Play! on Heroku check out the "Heroku Dev Center":http://devcenter.heroku.com/articles?q=play
